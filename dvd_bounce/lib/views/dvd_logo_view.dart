@@ -16,9 +16,10 @@ class DvdLogoView extends StatelessWidget {
               return Positioned(
                 left: logo.position.dx,
                 top: logo.position.dy,
-                child: Container(
-                  width: 50,
-                  height: 50,
+                child: Image.asset(
+                  'Assets/dvd_logo.png',
+                  width: 102.4,
+                  height: 41.95,
                   color: logo.color,
                 ),
               );

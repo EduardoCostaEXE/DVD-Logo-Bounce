@@ -7,8 +7,9 @@ class DvdLogoViewModel extends ChangeNotifier {
   DvdLogo _logo;
   double _dx = 1.0;
   double _dy = 1.0;
-  final double _speed = 2.0;
-  final double _size = 50.0;
+  final double _speed = 1;
+  final double _width = 102.4;
+  final double _height = 41.95;
   final Random _random = Random();
 
   DvdLogoViewModel()
@@ -26,11 +27,11 @@ class DvdLogoViewModel extends ChangeNotifier {
     double newX = _logo.position.dx + _dx * _speed;
     double newY = _logo.position.dy + _dy * _speed;
 
-    if (newX <= 0 || newX + _size >= screenSize.width) {
+    if (newX <= 0 || newX + _width >= screenSize.width) {
       _dx = -_dx;
       _changeColor();
     }
-    if (newY <= 0 || newY + _size >= screenSize.height) {
+    if (newY <= 0 || newY + _height >= screenSize.height) {
       _dy = -_dy;
       _changeColor();
     }
